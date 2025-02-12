@@ -146,7 +146,7 @@ int read_opts(int argc, char **argv) {
         return -1;
         break;
       case 'h':
-        printf("usage: processwatch [options]\n");
+        printf("usage: processwatchx [options]\n");
         printf("\n");
         printf("options:\n");
         printf("  -h          Displays this help message.\n");
