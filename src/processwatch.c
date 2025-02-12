@@ -452,7 +452,7 @@ void *ui_thread_main(void *a) {
     exit(1);
   }
   while(sigwait(&mask, &sig) == 0) {
-    if(sig == SIGTERM) {
+    if(sig == SIGTERM) || (sig == SIGINT) {
       break;
     }
   }
