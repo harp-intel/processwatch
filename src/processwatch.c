@@ -479,6 +479,7 @@ int start_ui_thread() {
      SIGTERMs go to the UI thread. */
   sigemptyset(&mask);
   sigaddset(&mask, SIGTERM);
+  sigaddset(&mask, SIGINT);
   if(sigprocmask(SIG_SETMASK, &mask, NULL) == -1) {
     fprintf(stderr, "Error blocking signal. Aborting.\n");
     exit(1);
