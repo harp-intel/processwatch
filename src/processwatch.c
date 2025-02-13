@@ -452,13 +452,13 @@ void *ui_thread_main(void *a) {
     exit(1);
   }
   while(sigwait(&mask, &sig) == 0) {
-    fprintf(stderr, "ui_thread_main RECEIVED SIGNAL\n")
+    fprintf(stderr, "ui_thread_main RECEIVED SIGNAL\n");
     if(sig == SIGTERM ) {
-      fprintf(stderr, "ui_thread_main RECEIVED SIGTERM\n")
+      fprintf(stderr, "ui_thread_main RECEIVED SIGTERM\n");
       break;
     }
     if (sig == SIGINT) {
-      fprintf(stderr, "ui_thread_main RECEIVED SIGINT\n")
+      fprintf(stderr, "ui_thread_main RECEIVED SIGINT\n");
       break;
     }
   }
